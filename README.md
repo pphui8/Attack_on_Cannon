@@ -15,7 +15,8 @@
 > 平台：funcode  
 > 操作系统： win7x86位操作系统  
 > 面向群体：普通大众  
-> 性能需求：在设想的标准系统下的相应时间不应有超过0.2s的延迟  
+> 性能需求：在设想的标准系统下的相应时间不应有超过0.2s的延迟 
+ 
 用例图：  
 ![user case](https://github.com/pphui8/Attack_on_Cannon/blob/main/pic/class%20diagram.png)
 类图：  

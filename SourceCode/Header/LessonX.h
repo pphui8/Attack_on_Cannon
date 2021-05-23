@@ -9,6 +9,7 @@
 //
 #include <Windows.h>
 #include<vector>
+using namespace std;
 
 /////////////////////////////////////////////////////////////////////////////////
 //
@@ -17,12 +18,13 @@ class	CGameMain
 {
 private:
 	int				m_iGameState;				// 游戏状态，0：结束或者等待开始；1：初始化；2：游戏进行中
-    CSprite*		zhunxin;
-	CSprite*		dapao;
+    CSprite*		dapao;
+    CSprite*		paoche;
+    float			GunRotation;		//炮筒同地面的夹角*******
+    int				GunRotToLeft;		//炮筒摆动的方向：***
     int				m_iBombNum;
 	CEffect*		gunfire;
-	std::vector<CSprite*> m_vPaodan;
-	float paodan_speed;
+	vector<CSprite*> m_vPaodan;
 
 public:
 	CGameMain();            //构造函数
@@ -46,7 +48,6 @@ public:
 	void 			OnKeyUp( const int iKey );
 	void 			OnSpriteColSprite( const char *szSrcName, const char *szTarName );
 	void 			OnSpriteColWorldLimit( const char *szName, const int iColSide );
-	void            Fire(int start_X, int start_Y, float idir);
 };
 
 /////////////////////////////////////////////////////////////////////////////////

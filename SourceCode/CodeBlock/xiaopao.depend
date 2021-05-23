@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1420212242 source:c:\program files\funcode\games\xiaopao\sourcecode\icon.rc
+
+1433847732 source:c:\program files\funcode\games\xiaopao\sourcecode\src\main.cpp
+	"CommonClass.h"
+	"LessonX.h"
+
+1461255074 c:\program files\funcode\games\xiaopao\sourcecode\header\commonclass.h
+	<windows.h>
+
+1621750159 c:\program files\funcode\games\xiaopao\sourcecode\header\lessonx.h
+	<Windows.h>
+	<vector>
+
+1621750522 source:c:\program files\funcode\games\xiaopao\sourcecode\src\lessonx.cpp
+	<Stdio.h>
+	"CommonClass.h"
+	"LessonX.h"
+	<cmath>
+

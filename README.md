@@ -8,7 +8,7 @@
 
 ## 目录
 - [需求分析](https://github.com/pphui8/Attack_on_Cannon/#需求分析)
-- []()
+- [开始游戏](https://github.com/pphui8/Attack_on_Cannon/#开始游戏)
 
 ## 需求分析
 > 定位与目标：利用c++程序语言设计一款游戏，要求游戏操作简单，游玩愉快有趣。  
@@ -21,3 +21,5 @@
 类图：  
 ![class diagram](https://github.com/pphui8/Attack_on_Cannon/blob/main/pic/class%20diagram.png)
 ![class diagram](https://github.com/pphui8/Attack_on_Cannon/blob/main/pic/class%20diagram2.png)
+
+## 开始游戏

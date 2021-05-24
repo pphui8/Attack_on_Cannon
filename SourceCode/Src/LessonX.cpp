@@ -223,11 +223,35 @@ void CGameMain::Fire(int start_X, int start_Y, float idir)
 		bomb->CloneSprite("paodan_muban");		//复制炮弹模板
 		bomb->SetSpritePosition(fPosX, fPosY);
 		//
-		speed_x = paodan_speed * sin(dire);
-		speed_y = paodan_speed * cos(dire);
+		speed_x = paodan_speed * cos(dire * M_PI /180);
+		speed_y = paodan_speed * sin(dire * M_PI / 180);
 		bomb->SetSpriteLinearVelocityX(30);
 		bomb->SetSpriteLinearVelocityY(speed_y);
 		//
 		gunfire->PlayEffect(fPosX, fPosY, 0.f);	//播放特效
 		m_vPaodan.push_back(bomb);		//将炮弹压入vector中集中管理
+}
+
+void CGameMain::LoadMap()
+{
+		char* szName;
+		int i,j;
+		float x,y;
+		for(i=0;i<11;i++)
+		{
+			for(j=0;j<13;j++)
+			{
+				if(g_iMap[i][j]==1)
+				{
+					szName = CSystem::MakeSpriteName("wall",j+i*13+i);//重新起名
+					CSprite* pWall = new CSprite(szName); //新建对象
+					pWall->CloneSprite("wall"); //克隆墙块
+					pWall->SetSpriteCollisionActive(0,1); //设置为接受碰撞
+					pWall->SetSpriteCollisionResponse(COL_RESPONSE_CUSTOM);
+					x =float(-24+4*j);
+					y =float(-20+4*i);
+					pWall->SetSpritePosition(x,y);
+				}
+			}
+		}
 }

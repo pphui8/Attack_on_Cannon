@@ -23,6 +23,21 @@ private:
 	CEffect*		gunfire;
 	std::vector<CSprite*> m_vPaodan;
 	float paodan_speed;
+	int g_iMap[11][13]=
+			{ 
+			{0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,1,1,1,1,0,0,0,1,1,1,1,0},
+{0,1,1,1,1,0,0,0,1,1,1,1,0},
+{0,1,1,1,1,0,0,0,1,1,1,1,0},
+{0,1,1,1,1,0,0,0,1,1,1,1,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0}
+			};
+
 
 public:
 	CGameMain();            //¹¹Ôìº¯Êý
@@ -47,6 +62,7 @@ public:
 	void 			OnSpriteColSprite( const char *szSrcName, const char *szTarName );
 	void 			OnSpriteColWorldLimit( const char *szName, const int iColSide );
 	void            Fire(int start_X, int start_Y, float idir);
+	void	LoadMap();
 };
 
 /////////////////////////////////////////////////////////////////////////////////
